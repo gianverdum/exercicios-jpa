@@ -15,14 +15,14 @@ public class Produto {
     @Column(name = "prod_nome", length = 200, nullable = false)
     private String nome;
 
-    @Column(name = "prod_preco", nullable = false, precision = 11, scale = 2)
-    private BigDecimal preco;
+    @Column(name = "prod_preco", nullable = false)
+    private Double preco;
 
     public Produto() {
 
     }
 
-    public Produto(String nome, BigDecimal preco) {
+    public Produto(String nome, Double preco) {
         this.nome = nome;
         this.preco = preco;
     }
@@ -43,11 +43,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public BigDecimal getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(BigDecimal preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 }

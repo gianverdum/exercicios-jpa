@@ -37,6 +37,7 @@ public class DAO<E> {
 
     public DAO<E> fecharTransacao() {
         em.getTransaction().commit();
+        return this;
     }
 
     public DAO<E> incluir(E entity) {
