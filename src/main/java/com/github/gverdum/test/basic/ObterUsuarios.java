@@ -1,4 +1,4 @@
-package com.github.gverdum.model.test.basic;
+package com.github.gverdum.test.basic;
 
 import com.github.gverdum.model.basic.Usuario;
 import jakarta.persistence.EntityManager;
