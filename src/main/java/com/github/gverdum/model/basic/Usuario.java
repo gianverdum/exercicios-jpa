@@ -1,6 +1,7 @@
 package com.github.gverdum.model.basic;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 
@@ -8,6 +9,7 @@ import jakarta.persistence.Id;
 public class Usuario {
 
     @Id
+    @GeneratedValue
     private Long id;
     private String nome;
     private String email;
@@ -16,7 +18,7 @@ public class Usuario {
 
     }
 
-    public Usuario(Long id, String nome, String email) {
+    public Usuario(String nome, String email) {
         this.nome = nome;
         this.email = email;
     }
