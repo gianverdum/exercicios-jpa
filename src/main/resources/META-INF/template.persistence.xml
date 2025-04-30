@@ -17,6 +17,11 @@
         <class>com.github.gverdum.model.muitospramuitos.Tio</class>
         <class>com.github.gverdum.model.muitospramuitos.Ator</class>
         <class>com.github.gverdum.model.muitospramuitos.Filme</class>
+        <class>com.github.gverdum.model.composicao.Endereco</class>
+        <class>com.github.gverdum.model.composicao.Fornecedor</class>
+        <class>com.github.gverdum.model.composicao.Funcionario</class>
+        <class>com.github.gverdum.model.heranca.Aluno</class>
+        <class>com.github.gverdum.model.heranca.AlunoBolsista</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver"
