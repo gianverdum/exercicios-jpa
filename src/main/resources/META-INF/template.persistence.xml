@@ -9,6 +9,10 @@
 
         <class>com.github.gverdum.model.basic.Usuario</class>
         <class>com.github.gverdum.model.basic.Produto</class>
+        <class>com.github.gverdum.model.umpraum.Assento</class>
+        <class>com.github.gverdum.model.umpraum.Cliente</class>
+        <class>com.github.gverdum.model.umpramuitos.ItemPedido</class>
+        <class>com.github.gverdum.model.umpramuitos.Pedido</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver"
