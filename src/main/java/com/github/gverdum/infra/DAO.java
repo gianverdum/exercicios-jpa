@@ -17,7 +17,8 @@ public class DAO<E> {
         try {
             emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         } catch (Exception e) {
-            // logar -> log4j
+            e.printStackTrace(); // <- mostra o erro no console
+            throw new RuntimeException("Erro ao criar EntityManagerFactory", e);
         }
     }
 
@@ -77,6 +78,11 @@ public class DAO<E> {
         }
 
         return query.getResultList();
+    }
+
+    public E consultarUm(String nomeConsulta, Object... params) {
+        List<E> lista = consultar(nomeConsulta, params);
+        return lista.isEmpty() ? null : lista.getFirst();
     }
 
     public void fechar() {

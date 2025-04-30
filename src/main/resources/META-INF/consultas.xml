@@ -13,4 +13,16 @@
         </query>
     </named-query>
 
+    <named-native-query name="mediaGeral" result-set-mapping="NotaFilmeMap">
+        <query>
+            SELECT avg(nota) as media FROM filmes
+        </query>
+    </named-native-query>
+
+    <sql-result-set-mapping name="NotaFilmeMap">
+        <constructor-result target-class="com.github.gverdum.model.consulta.NotaFilme">
+            <column name="media" class="java.lang.Double"/>
+        </constructor-result>
+    </sql-result-set-mapping>
+
 </entity-mappings>
