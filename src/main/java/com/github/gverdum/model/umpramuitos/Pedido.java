@@ -3,6 +3,7 @@ package com.github.gverdum.model.umpramuitos;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Pedido {
@@ -13,6 +14,9 @@ public class Pedido {
 
     @Column(nullable = false)
     private Date data;
+
+    @OneToMany(mappedBy = "pedido")
+    private List<ItemPedido> itens;
 
     public Pedido() {
         this( new Date());
@@ -36,5 +40,13 @@ public class Pedido {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemPedido> itens) {
+        this.itens = itens;
     }
 }
